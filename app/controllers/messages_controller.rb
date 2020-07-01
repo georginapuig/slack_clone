@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
   def create
-    # /chatrooms/1/messages
+    # /chatrooms/:chatroom_id/messages
     @chatroom = Chatroom.find(params[:chatroom_id])
     @message = Message.new(message_params)
     @message.chatroom = @chatroom
